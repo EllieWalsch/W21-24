@@ -25,8 +25,8 @@ export default {
     );
     return response.json();
   },
-  getReposByUsername(username) {
-    const response = await fetch(`${BASE_URL}/users/${username}/repos`);
+  getReposByUsername(ghUser) {
+    const response = await fetch(`${BASE_URL}/users/${ghUser}/repos`);
 
     return response.json();
   },
