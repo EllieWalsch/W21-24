@@ -21,6 +21,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
 document.getElementById("topics").addEventListener("click", (event) => {
   if (event.target.tagName === "BUTTON") {
     const topic = event.target.innerText.toLowerCase();
+    const data = await apiService.getReposByTopic(topic);
   }
 });
 
