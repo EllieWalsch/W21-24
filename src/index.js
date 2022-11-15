@@ -7,6 +7,12 @@ document.querySelectorAll("button").forEach((button) => {
   button.classList.add("button");
 });
 
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const username = event.target.username.value;
+});
+
 // TODO: create function to pull repos from username
 // async function
 // calls username and returns repos form github api
