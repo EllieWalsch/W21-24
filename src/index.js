@@ -18,6 +18,11 @@ document.querySelector("form").addEventListener("submit", (event) => {
   const data = await apiService.getReposByUsername(username);
 });
 
+document.getElementById("topics").addEventListener("click", (event) => {
+  if (event.target.tagName === "BUTTON") {
+    const topic = event.target.innerText.toLowerCase();
+  }
+});
 
 
 // TODO: create functions that filter repos by language
